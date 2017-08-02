@@ -93,8 +93,8 @@
   * 状态机
 ## Date对象
 * 主要函数
- * getFullYear()//获取年份
- * getMonth()//获取月份，0代表1月
- * getDay()//获取星期几
- * getDate()//获取日期
- * setDate()//设置日期
+  * getFullYear()//获取年份
+  * getMonth()//获取月份，0代表1月
+  * getDay()//获取星期几
+  * getDate()//获取日期
+  * setDate()//设置日期
