@@ -2,7 +2,7 @@
 日历组件
 ## 功能
 给定一个输入框，点击输入框日历显示，通过选取年份、月份、日期，使输入框显示“2017年8月1号”类型的日期。
-[日历组件]()
+[日历组件](http://htmlpreview.github.io/?https://github.com/ChickenHin/calendar-component-es6/blob/master/calendar.html)
 ## ES6
 * let
   * 不能重复声明
