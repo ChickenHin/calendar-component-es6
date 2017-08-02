@@ -1,0 +1,73 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.calendar-block {
+	width: 200px;
+	margin: 30px auto;
+}
+.calendar-block input {
+	height: 26px;
+	width: 218px;
+}
+#calendar {
+	border: 1px solid #ccc;
+	height: 260px;
+	width: 220px;
+	text-align: center;
+}
+#calendar section > header:first-of-type {
+	background: #c41e14;
+	width: 140px;
+	padding: 0 40px;
+}
+#calendar section button {
+	background: #c41e14;
+	border-style: none;
+	color: #fff;
+	cursor: pointer;
+}
+#calendar section select {
+	background: #c41e14;
+	border-style: none;
+	color: #fff;
+}
+#calendar section select:first-of-type {
+	width: 50px;
+}
+#calendar section select:nth-of-type(2) {
+	width: 40px;
+}
+#calendar section > header:nth-of-type(2) {
+    padding: 10px;
+}
+#calendar section > header:nth-of-type(2) span {
+    display: inline-block;
+    height: 30px;
+    width: 28px;
+}
+/*#calendar section > header:nth-of-type(2) span:first-of-type,
+#calendar section > header:nth-of-type(2) span:last-of-type {
+	color: #c41e14;
+}*/
+#calendar section > div {
+	color: #777;
+	padding: 0 10px 10px 10px;
+}
+#calendar section > div span {
+	display: inline-block;
+	height: 30px;
+	width: 28px;
+}
+.next-month-span {
+	color: #ccc;
+}
+.last-month-span {
+	color: #ccc;
+}
+.current-month-span:hover,
+.current-day-span {
+    background: #c41e14;
+    color: #fff;
+    cursor: pointer;
+}
