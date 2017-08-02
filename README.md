@@ -1,5 +1,8 @@
 # calendar-component-es6
-ES6编写的日历组件
+日历组件
+## 功能
+给定一个输入框，点击输入框日历显示，通过选取年份、月份、日期，使输入框显示“2017年8月1号”类型的日期。
+[日历组件]()
 ## ES6
 * let
   * 不能重复声明
@@ -87,4 +90,11 @@ ES6编写的日历组件
   * var res = function* show(){}
   * res.next()//value：yield后面的值,done：是否结束
   * 内部用yield语句
-  * 状态机
+  * 状态机
+## Date对象
+* 主要函数
+ * getFullYear()//获取年份
+ * getMonth()//获取月份，0代表1月
+ * getDay()//获取星期几
+ * getDate()//获取日期
+ * setDate()//设置日期
