@@ -88,13 +88,13 @@ class Calendar {
     clickEvent() {
         let self = this;
         // 载入事件处理模块
-        require(['event'], function (EventUtil){
+        require(['event'], (EventUtil) => {
             let dateSection = document.getElementsByTagName('section')[0];
             let dayDivs = dateSection.getElementsByTagName('div')[0];
             let clickBtn = dateSection.getElementsByTagName('button');
             let clickSel = dateSection.getElementsByTagName('select');
             // 点击日期选中，不能选其他月的日期
-            EventUtil.addHandler(dayDivs, 'click', function(e) {
+            EventUtil.addHandler(dayDivs, 'click', (e) => {
                 let ev = EventUtil.getEvent(e);
                 let eTarget = EventUtil.getTarget(ev);
                 if(!((eTarget.className == 'current-month-span') || (eTarget.className == 'current-day-span'))) {
@@ -108,7 +108,7 @@ class Calendar {
                 }
             });
             // 上一个月，默认选中一号
-            EventUtil.addHandler(clickBtn[0], 'click', function() {
+            EventUtil.addHandler(clickBtn[0], 'click', () => {
                 // 如果是一月，变成上一年12月
                 if(self.dateChoosen.getMonth() == 0) {
                     let strPrev = 12 + "/" + 1 + "/" + (self.dateChoosen.getFullYear() - 1);
@@ -120,7 +120,7 @@ class Calendar {
                 self.createBlcok();
             });
             // 下一个月，默认选中一号
-            EventUtil.addHandler(clickBtn[1], 'click', function() {
+            EventUtil.addHandler(clickBtn[1], 'click', () => {
                 // 如果是十二月，变成下一年1月
                 if(self.dateChoosen.getMonth() == 11) {
                     let strNext = 1 + "/" + 1 + "/" + (self.dateChoosen.getFullYear() + 1);
@@ -132,19 +132,19 @@ class Calendar {
                 self.createBlcok();
             });
             // 选择年份
-            EventUtil.addHandler(clickSel[0], 'change', function() {
+            EventUtil.addHandler(clickSel[0], 'change', () => {
                 let strYear = (self.dateChoosen.getMonth() + 1) + "/" + 1 + "/" + clickSel[0].getElementsByTagName('option')[clickSel[0].selectedIndex].innerHTML;
                 self.dateChoosen = new Date(strYear);
                 self.createBlcok();
             });
             // 选择月份
-            EventUtil.addHandler(clickSel[1], 'change', function() {
+            EventUtil.addHandler(clickSel[1], 'change', () => {
                 let strMon = clickSel[1].getElementsByTagName('option')[clickSel[1].selectedIndex].innerHTML + "/" + 1 + "/" + self.dateChoosen.getFullYear();
                 self.dateChoosen = new Date(strMon);
                 self.createBlcok();
             });
             // 点击输入框显示日历
-            EventUtil.addHandler(self.showDate, 'focus', function() {
+            EventUtil.addHandler(self.showDate, 'focus', () => {
                 self.calendarBlock.style.display = "block";
             });
 　　    });

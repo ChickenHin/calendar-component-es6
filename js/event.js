@@ -1,6 +1,6 @@
 'use strict';
 
-define(function (){
+define(() => {
 // 跨浏览器事件处理
 class EventUtil {
 	// 绑定事件
